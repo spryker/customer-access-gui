@@ -18,18 +18,12 @@ class CustomerAccessDataProvider
      */
     protected $customerAccessFacade;
 
-    /**
-     * @param \Spryker\Zed\CustomerAccessGui\Dependency\Facade\CustomerAccessGuiToCustomerAccessFacadeInterface $customerAccessFacade
-     */
     public function __construct(
         CustomerAccessGuiToCustomerAccessFacadeInterface $customerAccessFacade
     ) {
         $this->customerAccessFacade = $customerAccessFacade;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
-     */
     public function getData(): CustomerAccessTransfer
     {
         return $this->customerAccessFacade->getRestrictedContentTypes();

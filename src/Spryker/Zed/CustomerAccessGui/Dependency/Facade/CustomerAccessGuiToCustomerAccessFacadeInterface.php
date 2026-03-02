@@ -11,25 +11,11 @@ use Generated\Shared\Transfer\CustomerAccessTransfer;
 
 interface CustomerAccessGuiToCustomerAccessFacadeInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
-     *
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
-     */
     public function updateUnauthenticatedCustomerAccess(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer;
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
-     */
     public function getAllContentTypes(): CustomerAccessTransfer;
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
-     */
     public function getUnrestrictedContentTypes(): CustomerAccessTransfer;
 
-    /**
-     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
-     */
     public function getRestrictedContentTypes(): CustomerAccessTransfer;
 }

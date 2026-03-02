@@ -21,11 +21,6 @@ class CustomerAccessGuiDependencyProvider extends AbstractBundleDependencyProvid
      */
     public const FACADE_CUSTOMER_ACCESS = 'FACADE_CUSTOMER_ACCESS';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = $this->addCustomerAccessFacade($container);
@@ -33,11 +28,6 @@ class CustomerAccessGuiDependencyProvider extends AbstractBundleDependencyProvid
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addCustomerAccessFacade(Container $container): Container
     {
         $container->set(static::FACADE_CUSTOMER_ACCESS, function (Container $container) {

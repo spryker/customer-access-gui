@@ -20,11 +20,6 @@ class IndexController extends AbstractController
      */
     protected const MESSAGE_UPDATE_SUCCESS = 'Not logged in customer accessible content has been successfully updated.';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return array
-     */
     public function indexAction(Request $request): array
     {
         $customerAccessDataProvider = $this->getFactory()->createCustomerAccessDataProvider();
